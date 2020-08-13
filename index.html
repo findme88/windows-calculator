@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Калькулятор вікон</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="title">Калькулятор вікон</h1>
+      <h3 class="subtitle">
+        Даний інтерфейс передбачає формування заявки, на підставі якої
+        розрахунок буде виконувати менеджер.
+      </h3>
+    </div>
+    <main class="main">
+      <h3>Вікно</h3>
+      <div class="window">
+        <div class="example_1 active"></div>
+        <div class="example_2 active">
+          <div class="triangle_up"></div>
+          <div class="triangle_right"></div>
+        </div>
+        <div class="example_3 active"></div>
+      </div>
+      <div class="windows__params">
+        <h3 class="params">Параметри вікна</h3>
+        <div class="size">
+          <input class="width" type="number" placeholder="ширина 500 - 1200mm" />
+          <input class="height"  type="number" placeholder="висота 500 - 1800mm" />
+        </div>
+        <select class="profile" name="size" autofocus>
+          <option disabled="disabled" selected="selected">Профіль</option>
+          <option>Rehau</option>
+          <option>WDS</option>
+          <option>Salamander</option>
+        </select>
+        <h3 class="glazed">Склопакет</h3>
+        <div class="radio">
+          <div>
+            <input type="radio" id="Choice1" name="contact" value="email" />
+            <label for="Choice1">Однокамерний</label>
+          </div>
+          <div>
+            <input type="radio" id="Choice2" name="contact" value="phone" />
+            <label for="Choice2">Двокамерний</label>
+          </div>
+          <div>
+            <input type="radio" id="Choice3" name="contact" value="mail" />
+            <label for="Choice3">Енергозберігаючий</label>
+          </div>
+        </div>
+        <button class="calculate">РОЗРАХУВАТИ</button>
+      </div>
+    </main>
+    <script  src="js/script.js"> </script>
+  </body>
+</html>
