@@ -7,23 +7,34 @@ let $win3 = document.querySelector(".example_3");
 let $alert = document.querySelector(".alert");
 let $alert2 = document.querySelector(".alert2");
 
+const size = {
+  smallWidthInitial: 500,
+  smallWidthFinal: 700,
+  middleWidthFinal: 1000,
+  largeWidthFinal: 1200,
+  heightInitial: 500,
+  heightFinal: 1800 
+  
+}
+
 let clk = () => {
   let $width = document.querySelector(".width").value;
   let $height = document.querySelector(".height").value;
-
+  $alert2.classList.remove('active')
+  
 //   ($width === '' || $height === '' ? $alert.classList.add('active') : $alert.classList.remove('active'))
   
-  if ($width >= 500 && $width <= 700 && $height>=500 && $height <=1800) {
+  if ($width >= size.smallWidthInitial && $width <= size.smallWidthFinal && $height>= size.heightInitial && $height <= size.heightFinal) {
       $win1.classList.add('active')
       
-  } else if ($width > 700 && $width < 1000 && $height>=500 && $height <=1800) {
+  } else if ($width > size.smallWidthFinal && $width < size.middleWidthFinal && $height>= size.heightInitial && $height <= size.heightFinal) {
     $win1.classList.add('active')
     $win2.classList.add('active')
-  } else if ($width > 1000 && $width < 1200 && $height>=500 && $height <=1800) {
+  } else if ($width > size.middleWidthFinal && $width <= size.largeWidthFinal && $height>= size.heightInitial && $height <= size.heightFinal) {
     $win1.classList.add('active')
     $win2.classList.add('active')
     $win3.classList.add('active')
   } else $alert2.classList.add('active')
 };
 
-$btn.onclick = clk;
+$btn.addEventListener('click', clk)
